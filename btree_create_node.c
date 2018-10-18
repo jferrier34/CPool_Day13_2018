@@ -13,12 +13,12 @@ btree_t *btree_create_node(void *item)
     t_btree *btree;
     btree = NULL;
 
-    btree = (t_btree*)malloc(sizeof(t_btree));
+    btree = malloc(sizeof(*btree));
 
-    if (btree != NULL) {
-	btree->left = NULL;
+    if (btree == NULL) {
+        btree->left = NULL;
         btree->right = NULL;
-	btree->item = item;
+        btree->item = item;
     }
     return (btree);
 }
