@@ -6,11 +6,11 @@
 */
 
 #include<stdlib.h>
-#include"../include/btree.h"
+#include"include/btree.h"
 
 btree_t *btree_create_node(void *item)
 {
-    t_btree *btree;
+    btree_t *btree;
     btree = NULL;
 
     btree = malloc(sizeof(*btree));
